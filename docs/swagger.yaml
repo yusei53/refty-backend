@@ -1,0 +1,28 @@
+basePath: api/v1
+host: localhost:8080
+info:
+  contact: {}
+  description: This is the Refty API server.
+  title: Refty API
+  version: "1.0"
+paths:
+  /ping:
+    get:
+      description: Returns "pong" if server is working
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Ping the server
+      tags:
+      - Health
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

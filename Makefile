@@ -5,3 +5,10 @@ up:
 	docker-compose up --watch
 down:
 	docker-compose down
+swag:
+	swag init \
+	--parseDependency \
+	--parseInternal \
+	--parseDepth 5 \
+	--generalInfo ./cmd/server/main.go \
+	--dir .
